@@ -31,14 +31,16 @@ def say_hello():
 @app.route('/skills')
 def say_skills():
     return jsonify({
-        "skills": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Python",
-            "Flask",
-            "Database Management"
-        ]
+       {
+  "skills": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Python",
+    "Flask",
+    "Database Management"
+  ]
+}
     })
 
 if __name__ == '__main__':
