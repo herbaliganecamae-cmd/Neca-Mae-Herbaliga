@@ -1,3 +1,4 @@
+
 from flask import Flask, jsonify, request
 
 app = Flask(__name__)
@@ -18,11 +19,26 @@ def get_student():
         "section": "B"
     })
 
+# Hello Route
 @app.route('/hello')
 def say_hello():
     name = request.args.get('name', 'Student')
     return jsonify({
         "message": f"Hello, {name}!"
+    })
+
+# Skills Route
+@app.route('/skills')
+def say_skills():
+    return jsonify({
+        "skills": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python",
+            "Flask",
+            "Database Management"
+        ]
     })
 
 if __name__ == '__main__':
